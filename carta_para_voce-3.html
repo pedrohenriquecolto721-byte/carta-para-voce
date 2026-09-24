@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uma carta para você 🌹</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; color:#fff;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,120,170,.18), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(160,80,255,.16), transparent 32%),
+    linear-gradient(135deg,#100713,#1d0b1b 48%,#08050d);
+  overflow-x:hidden;
+}
+.stars,.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{
+  position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;
+  opacity:.6;animation:twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle{50%{opacity:.12;transform:scale(.5)}}
+.heart{
+  position:absolute;bottom:-40px;font-size:18px;opacity:0;
+  animation:floatUp linear infinite;
+  filter:drop-shadow(0 0 8px rgba(255,110,170,.7));
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0deg) scale(.8);opacity:0}
+  15%{opacity:.75} 100%{transform:translateY(-115vh) rotate(25deg) scale(1.5);opacity:0}
+}
+.cover{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:28px;position:relative;
+}
+.card{
+  width:min(760px,100%);padding:42px 28px;text-align:center;
+  border:1px solid rgba(255,190,220,.28);
+  background:rgba(25,10,24,.68);backdrop-filter:blur(14px);
+  border-radius:28px;box-shadow:0 0 70px rgba(255,70,150,.14);
+  animation:appear 1.4s ease both;
+}
+@keyframes appear{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+.rose{font-size:58px;animation:pulse 2.2s infinite ease-in-out}
+@keyframes pulse{50%{transform:scale(1.12);filter:drop-shadow(0 0 16px #ff6fae)}}
+h1{font-size:clamp(34px,8vw,64px);font-weight:400;margin:12px 0}
+.subtitle{font-size:17px;opacity:.78;line-height:1.7}
+button{
+  margin-top:25px;border:0;border-radius:999px;padding:15px 28px;
+  color:#fff;background:linear-gradient(90deg,#b72d69,#6e3bb7);
+  font-size:16px;cursor:pointer;box-shadow:0 8px 25px rgba(183,45,105,.25);
+  transition:.25s;
+}
+button:hover{transform:translateY(-2px) scale(1.02)}
+#carta{
+  display:none;width:min(850px,92%);margin:30px auto 80px;
+  padding:35px 26px;background:rgba(19,8,18,.82);
+  border:1px solid rgba(255,190,220,.22);border-radius:25px;
+  box-shadow:0 0 70px rgba(255,70,150,.1);
+}
+#carta.show{display:block;animation:appear 1s ease both}
+h2{text-align:center;font-weight:400;font-size:32px;margin-top:0}
+p{font-size:18px;line-height:1.85;color:#f8eaf2;margin:0 0 20px}
+.divider{text-align:center;color:#ff8bb9;font-size:24px;margin:30px 0}
+.quote{
+  border-left:2px solid #e477a5;padding:12px 18px;margin:25px 0;
+  color:#f4cadb;font-style:italic;background:rgba(255,120,170,.045)
+}
+.signature{text-align:center;font-size:21px;margin-top:45px;color:#ffc2da}
+.top{text-align:center;margin-top:35px}
+.small{font-size:13px;opacity:.5;text-align:center;margin-top:35px}
+@media(max-width:600px){.card{padding:34px 20px}#carta{padding:28px 19px}p{font-size:17px;line-height:1.75}}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="hearts" id="hearts"></div>
+
+<section class="cover">
+  <div class="card">
+    <div class="rose">🌹</div>
+    <h1>Uma carta para você</h1>
+    <div class="subtitle">
+      Algumas coisas são difíceis de dizer em voz alta.<br>
+      Então escrevi.
+    </div>
+    <button onclick="abrirCarta()">Abrir a carta 💌</button>
+  </div>
+</section>
+
+<main id="carta">
+<h2>Para você 🌹</h2>
+
+<p>Há muito tempo tenho te observado, não de forma maldosa, mas sim de uma forma sentimental. Percebo que, quando eu falo com você, acho muito divertido o seu jeito, o seu carinho com as palavras e o seu humor.</p>
+
+<p>Infelizmente, tenho uma coisa para te falar, mas antes disso, não traduza isso até você chegar em São Paulo definitivamente.</p>
+
+<p>Bom, pode até parecer meio óbvio o que vou falar, mas talvez você não tenha percebido. Antes de te conhecer, quando vi você pela primeira vez, senti algo estranho. Sei lá, talvez seja admiração, eu pensei, mas logo percebi que era algo mais profundo. Então, para ter certeza, comecei a observar você mais frequentemente e, admito, parecia um estranho. Mas toda vez que olhava para você, sentia um sentimento que nunca presenciei antes e, com minhas próprias palavras, digo que era amor.</p>
+
+<p>E isso mesmo. Mas não se preocupe, não é uma declaração, é apenas uma explicação. Não quero nada com essa carta, até porque seria um erro pedir alguma resposta. Logo, como devo imaginar que você vai para São Paulo, desejo boa sorte a você e que consiga seu astro do BTS. Como sei que não tenho chance, só consigo desejar isso.</p>
+
+<p>Bem, como eu vou lidar com isso, não sei. Mas, se você, por acaso, traduzir essa carta antes de chegar em São Paulo, só chegue em minha pessoa e fale: “Eu li a carta”. Depois disso, quero que siga a vida normalmente, como se eu nunca tivesse escrito isso, e continue conversando normalmente comigo. E, por favor, não conte a ninguém que fiz isso.</p>
+
+<p>Não sinto vergonha nenhuma de expressar o que sinto, mas, caso você já esteja em um relacionamento, não quero que isso atrapalhe você. Bem, como estou fazendo essa carta 100% sozinho, sem ajuda da internet ou do ChatGPT, peço que pelo menos respeite a minha coragem de fazer isso e não conte a mais ninguém, entende?</p>
+
+<div class="divider">✦ ♥ ✦</div>
+
+<p>Então, já que entendeu o que eu estou passando, neste exato dia 24 de setembro, às 1:24 da madrugada, vou explicar o porquê disso tão de repente.</p>
+
+<p>Bom, ontem, na aula, presenciei o término de uma colega e vi o tanto que ela sofreu. Com isso, pensei que, antes que você, por acaso, sofra algo assim, saiba que teve uma pessoa que sempre te amou. Mas eu duvido que alguém te rejeitaria ou terminaria com você, então isso é só mais uma desculpa para mostrar que te amo.</p>
+
+<p>Enfim, talvez você leia isso e fale: “Nossa, que menino estranho”, e ria de mim. Pode até ser, mas duvido que você faria isso depois de alguém declarar o que sente. Mesmo eu falando que não é uma declaração, as palavras não mentem.</p>
+
+<p>Enfim, talvez eu faça um site para essa carta. Bom, sei lá.</p>
+
+<p>Só não quero que, depois de ler isso, você pare de falar comigo. Mas aposto que você sabe muito bem que há vários amigos e amigas suas que te querem. Eu sou só mais um no meio dessa bagunça.</p>
+
+<p>Você pode perguntar o porquê de eu não ter falado isso diretamente para você, ou escrito numa folha e também não ter falado com a minha boca, hahaha.</p>
+
+<p>Bom, o motivo é simples: não tenho vergonha de admitir que gosto de você, mas o medo de ser julgado e ser alvo da escola inteira, que pode me zoar, é o suficiente para me acorrentar em um impasse de dependência emocional tão grande que chega até a ser ridículo o tanto que eu cheguei a amar uma pessoa.</p>
+
+<p>E é até engraçado eu falar isso, porque eu sempre achei que nunca amaria ninguém, mas esse dia chegou.</p>
+
+<div class="divider">🌙</div>
+
+<p>O único problema é: por que tinha que ser você? Não podia pelo menos não ter sido tão gentil comigo?</p>
+
+<p>Me sinto muito culpado por alguém como eu pensar em gostar de você, como se você fosse uma pessoa que eu nunca conseguiria alcançar. Neste exato momento, choro, não porque estou hesitante em te mandar isso, mas sim porque sei que você não sente o mesmo por mim. E, se você sente, por favor, me fale. Só não me julgue por pedir algo impossível. Me julgue por sentir algo improvável.</p>
+
+<p>Jamais esquecerei do meu primeiro amor da segunda série do ensino médio e lembrarei de você pelo resto da vida. Não acho que conseguirá gostar de mim depois disso. Só espero que minhas palavras tenham sido o suficiente para matar o mal-entendido.</p>
+
+<p>Aquela vez que fugi de você ao me perguntar o porquê de eu olhar para você daquela forma, fugi porque... me diga como. Como falar o que sinto para uma pessoa que tinha acabado de conhecer minha pessoa?</p>
+
+<p>Não lamento não ter falado naquele momento, pois, se tivesse falado, aposto que não teria tido esses momentos maravilhosos ao seu lado, mesmo que tivesse sido como amigo.</p>
+
+<p>Admito que sinto ciúme quando descubro que alguém gosta de você, mas como falar que não gosto que gostem da minha amada se minha amada não me ama ao ponto que eu cheguei?</p>
+
+<p>Não quero ser controlador, não quero parecer arrogante, não quero sequer fazer você pensar que sou louco. Só simplesmente não suporto que alguém ouse tocar em uma flor sem espinhos se, na mão dela, há veneno.</p>
+
+<p>Não suporto pensar que, mesmo se a minha flor desenvolver espinhos, a pessoa use luvas para arrancá-la do solo fértil.</p>
+
+<p>Saiba que, caso alguma pessoa arranque você, minha flor, e você estiver em um quarto escuro, sem sol para crescer, chorando com a falta de água, e em frente a um celular pensar em se murchar, lembre do meu número e me mande uma mensagem. Pode ser qualquer coisa. Eu responderia com a maior delicadeza possível e vou fazer o possível para ajudar.</p>
+
+<p>Posso ser gordo, posso ser feio, mas saiba que, aonde você estiver, ou se, após esta carta, o seu jeito mudar, eu nunca te trataria diferente.</p>
+
+<p>Quero que saiba que a única vez que falei mal de você foi com as seguintes palavras:</p>
+
+<div class="quote">“Queria que ela não fosse embora, mas ela é muito burra para perceber que as pessoas que mais amam ela estão ao redor dela nesse exato momento.”</div>
+
+<p>Cada um tem suas escolhas, seus motivos, e aposto que o seu não é diferente.</p>
+
+<p>Se você leu até aqui, fiquei muito feliz.</p>
+
+<div class="divider">🌹 ✦ 🌹</div>
+
+<p>Resumindo, quero você, gosto de você, nunca amaria alguém além de você, sempre penso em você, sempre pensei em você. Antes de te conhecer, nunca senti um sentimento parecido antes.</p>
+
+<p>Você é minha flor, você é meu amor recíproco, e o único arrependimento que tenho é de ser tão feio ao ponto de não ter chance de tentar te conquistar.</p>
+
+<p>Espero que continuemos amigos e que, mesmo que eu seja a última pessoa que você queria ouvir isso, não consegui aguentar.</p>
+
+<p>Terminei esse texto às 1:50 da madrugada. Sim, eu só escrevi o que sinto nesse exato momento. Não coloquei nenhuma coisa precipitada aqui.</p>
+
+<p>Te desejo um feliz relacionamento, se você estiver em algum neste momento, em São Paulo.</p>
+
+<p>Se você tiver lido essa carta antes de ter ido, só, por favor, não me abandone por causa do que sinto. Até porque, antes você saber o jeito que te vejo e ser minha amiga, do que não saber o que eu penso sobre você e ser minha amiga.</p>
+
+<div class="signature">Com carinho. 🌹</div>
+<div class="small">Escrito às 1:50 da madrugada — 24 de setembro</div>
+<div class="top"><button onclick="window.scrollTo({top:0,behavior:'smooth'})">Voltar ao início ↑</button></div>
+</main>
+
+<script>
+function abrirCarta(){
+  const c=document.getElementById('carta');
+  c.classList.add('show');
+  setTimeout(()=>c.scrollIntoView({behavior:'smooth'}),150);
+}
+const stars=document.getElementById('stars');
+for(let i=0;i<90;i++){
+  const s=document.createElement('i'); s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=Math.random()*3+'s';
+  stars.appendChild(s);
+}
+const hearts=document.getElementById('hearts');
+const symbols=['♥','♡','✦'];
+for(let i=0;i<24;i++){
+  const h=document.createElement('span'); h.className='heart';
+  h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  h.style.left=Math.random()*100+'%';
+  h.style.animationDuration=(8+Math.random()*9)+'s';
+  h.style.animationDelay=(Math.random()*10)+'s';
+  h.style.fontSize=(12+Math.random()*18)+'px';
+  hearts.appendChild(h);
+}
+</script>
+</body>
+</html>
